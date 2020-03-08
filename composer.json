@@ -1,0 +1,33 @@
+{
+    "name": "everything-now/krusher-sdk",
+    "description": "Krusher SDK for ease",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Everything Now",
+            "email": "vadym.mr@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "arthurkushman/php-wss": "1.4.1",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "EverythingNow\\Krusher\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EverythingNow\\Krusher\\KrusherServiceProvider"
+            ],
+            "aliases": {
+                "KrusherSocket": "EverythingNow\\Krusher\\Facades\\Socket"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
